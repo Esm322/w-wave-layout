@@ -401,3 +401,113 @@ body {
     }
   }
 }
+
+
+.playlists {
+  padding: $section_offset;
+
+  .playlists__container {
+    display: flex;
+    flex-flow: column wrap;
+    height: 732px;
+
+    .playlists__title {
+      margin: 0;
+      margin-bottom: 12px;
+      width: 350px;
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 100%;
+    }
+
+    .playlists__content-wrapper {
+      margin-right: 30px;
+      padding-bottom: 32px;
+      width: 350px;
+      background-image: url('../img/adult.png');
+      background-repeat: no-repeat;
+      background-position: bottom left;
+      color: $text_gray-color;
+
+      .playlists__text-warning {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 137%;
+      }
+
+      .playlists__text-copy {
+        font-style: italic;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 137%;
+      }
+    }
+
+    .playlists__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 732px;
+      height: 100%;
+
+      .list__item {
+        width: calc((92% - 30px) / 4);
+        height: 224px;
+
+        .playlists__article {
+          position: relative;
+
+          .article__img {
+            margin-bottom: -3.8px;
+          }
+
+          .article__russian {
+            position: absolute;
+            top: 0;
+            right: 1px;
+            width: 24px;
+            height: 20px;
+            background-color: $black-color;
+            background-image: url('../img/russian.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+          }
+
+          .article__british {
+            position: absolute;
+            top: 0;
+            right: 1px;
+            width: 24px;
+            height: 20px;
+            background-color: $black-color;
+            background-image: url('../img/british.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+          }
+
+          .article__content-wrapper {
+            padding: 13px;
+            border: 1px solid $light-color;
+
+            .article__title {
+              margin: 0;
+              margin-bottom: 4px;
+              font-weight: 500;
+              font-size: 16px;
+            }
+
+            .article__album {
+              font-weight: 400;
+              font-size: 12px;
+              color: $text_gray-color;
+            }
+          }
+        }
+      }
+
+      .list__item:not(:nth-last-child(1)).list__item:not(:nth-last-child(2)).list__item:not(:nth-last-child(3)).list__item:not(:nth-last-child(4)) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
